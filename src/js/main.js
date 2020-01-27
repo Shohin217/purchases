@@ -27,13 +27,17 @@ let sum = 0;
 
 buttonAddEl.onclick = (evt) => {
     evt.preventDefault();
-    sum+=parseFloat(inputSumEl.value)
-    amountEl.textContent = `Общяя сумма: ${sum}`
+    // sum+=parseFloat(inputSumEl.value)
+    
     
     const category = inputCategoryEl.value
-    const value  = inputSumEl.value
+    const value  = parseInt (inputSumEl.value, 10)
+    
+    sum+=value
+
     const purchasesEl = document.createElement('li');
     
+    amountEl.textContent = `Общяя сумма: ${sum}`
     purchasesEl.innerHTML =`
     Попукпа на сумму ${value}, в категрии ${category} <button data-action="up">UP</button> <button data-action="down">DOWN</button> <button data-action="remove">x</button>
     `;
