@@ -61,16 +61,18 @@ buttonAddEl.onclick = (evt) => {
     buttonUp.onclick=()=>{
         if(purchasesEl==purchasesListEl.firstElementChild){
             purchasesListEl.insertBefore(purchasesEl, null)
-        }else{
-            purchasesListEl.insertBefore(purchasesEl, purchasesEl.previousElementSibling)
+            return;
         }
+        purchasesListEl.insertBefore(purchasesEl, purchasesEl.previousElementSibling)
+        
     }
 
     buttonDown.onclick=()=>{
         if(purchasesEl===purchasesListEl.lastElementChild){
             purchasesListEl.insertBefore(purchasesEl, purchasesListEl.firstElementChild)
-        }else{
-            purchasesListEl.insertBefore(purchasesEl.nextElementSibling, purchasesEl )
+            return;
         }
+        purchasesListEl.insertBefore(purchasesEl.nextElementSibling, purchasesEl )
+        
     }
 }
