@@ -45,7 +45,7 @@ buttonAddEl.onclick = (evt) => {
     const purchasesRemove= purchasesEl.querySelector('[data-action=remove]')
     
     purchasesRemove.onclick = () =>{
-        purchasesEl.remove('li')
+        purchasesEl.removeChild()
         sum -= value
         amountEl.textContent = `Общяя сумма: ${sum}`
     } 
